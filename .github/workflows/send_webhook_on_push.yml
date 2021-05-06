@@ -9,7 +9,8 @@ on:
 jobs:
   Send-Webhook:
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'The-OpenROAD-Project' && github.ref == 'refs/heads/master'
+    #if: github.repository_owner == 'The-OpenROAD-Project' && github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master'
     steps:
       - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
